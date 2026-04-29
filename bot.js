@@ -3,7 +3,7 @@ const client = bedrock.createClient({
   host: 'DOMIN4TORSMP.aternos.me',   
   port: 52442,         
   username: 'SERVERTERMINAL',   
-  offline: true  
+  offline: false  
 }) // ← Missing closing parenthesis and bracket
 
 client.on('error', (err) => {
