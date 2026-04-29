@@ -1,22 +1,7 @@
 const bedrock = require('bedrock-protocol')
-
-function connectToServer() {
-  const client = bedrock.createClient({
-    host: 'DOMIN4TORSMP.aternos.me',
-    port: 52442,
-    username: 'SERVERTERMINAL',
-    offline: false
-  })
-
-  client.on('error', (err) => {
-    console.error('Connection error:', err.message)
-    setTimeout(connectToServer, 5000) // Reconnect
-  })
-
-  client.on('end', () => {
-    console.log('Disconnected. Reconnecting...')
-    setTimeout(connectToServer, 5000)
-  })
-}
-
-connectToServer()   
+const client = bedrock.createClient({
+  host: 'server_ip',   
+  port: 19132,         // optional, default 19132
+  username: 'Notch',   // the username you want to join as, optional if online mode
+  offline: true       // optional, default false. if true, do not login with Xbox Live. You will not be asked to sign-in if set to true.
+})
